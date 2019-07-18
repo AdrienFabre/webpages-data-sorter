@@ -1,9 +1,11 @@
 class WebDataSorter
   attr_accessor :views
 
-  def initialize(file)
+  def initialize(file_path)
+    file_path_valid?(file_path)
+
     @views = Hash.new { |page, ips| page[ips] = [] }
-    format_views_hash(file)
+    format_views_hash(file_path)
   end
 
   def sort_by_most_visits
@@ -19,6 +21,10 @@ class WebDataSorter
   end
 
   private
+
+  def file_path_valid?(file_path)
+    raise "No such file @ #{file_path}" unless File.file? file_path
+  end
 
   def format_views_hash(file)
     all_lines = File.readlines file
