@@ -47,7 +47,7 @@ rspec
 ### Results
 
 ```md
-  Display
+Display
   displays the descendant ordered list
     show the formated list
     show the formated list
