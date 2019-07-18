@@ -36,6 +36,41 @@ Rspec
 /about/2 8 unique views /index 5 unique views etc.
 ```
 
+## Tests
+
+### Run
+
+```md
+rspec
+```
+
+### Results
+
+```md
+  Display
+  displays the descendant ordered list
+    show the formated list
+    show the formated list
+
+User stories
+  displays the descendant ordered list
+    of pages with the most visits
+    of pages with the most unique views
+
+WebDataSorter
+  returns the descendant ordered list
+    of pages with the most visits
+    of pages with the most unique views
+  returns an error message
+    raises an error if file is not found
+
+Finished in 0.00549 seconds (files took 0.14562 seconds to load)
+7 examples, 0 failures
+
+Coverage report generated for RSpec to /home/adrien/Projects/ruby/webpages-data-sorter/coverage. 74 / 74 LOC (100.0%) covered.
+```
+
+
 ## Execute Linter auto-correct
 
 ```md

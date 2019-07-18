@@ -3,7 +3,6 @@ class WebDataSorter
 
   def initialize(file_path)
     file_path_valid?(file_path)
-
     @views = Hash.new { |page, ips| page[ips] = [] }
     format_views_hash(file_path)
   end
@@ -36,11 +35,11 @@ class WebDataSorter
 
   def collect_data(type)
     pages_data = []
-    views.map { |page, ip| pages_data << format_page(page, ip, type) }
+    views.map { |page, ip| pages_data << format_data(page, ip, type) }
     pages_data
   end
 
-  def format_page(page, ip, type)
+  def format_data(page, ip, type)
     page_data = Hash.new(0)
     page_data[:name] = page
     page_data[type.to_sym] = (type == 'visits' ? ip.count : ip.uniq.count)

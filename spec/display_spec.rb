@@ -21,14 +21,14 @@ describe Display do
 
   describe 'displays the descendant ordered list' do
     it 'show the formated list' do
-      expect { display.show(list_pages_visits, 'visits') }.to output(
+      expect { subject.show(list_pages_visits, 'visits') }.to output(
         '/help_page/1 3 visits /about/2 2 visits /home 1 visits '
       )
         .to_stdout
     end
     it 'show the formated list' do
       expect {
-        display.show(list_pages_unique_views, 'unique_views')
+        subject.show(list_pages_unique_views, 'unique_views')
       }.to output(
         '/about/2 2 unique views /home 1 unique views /help_page/1 1 unique views '
       )
