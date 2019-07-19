@@ -36,6 +36,12 @@ Rspec
 /about/2 8 unique views /index 5 unique views etc.
 ```
 
+## Install
+
+```md
+bundle install
+```
+
 ## Tests
 
 ### Run
